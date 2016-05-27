@@ -16,6 +16,8 @@ namespace UrlsSample
 
 			Console.WriteLine("ThisEnvironment={0}", Urls.ThisEnvironment);
 
+			Urls.ContentWeb.WebDomain = "http://localhost:8080/";
+
 			Console.WriteLine("\nIndividual Properties:\n----------------------");
 			Console.WriteLine("Urls.ContentWeb.Home = {0}", Urls.ContentWeb.Home);
 

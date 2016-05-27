@@ -65,7 +65,11 @@ namespace UrlHandler.Core
 		/// <summary>
 		/// Gets the Domain name for TxWeb
 		/// </summary>
-		public string WebDomain { get { return _WebDomain; } }
+		public string WebDomain 
+		{ 
+			get { return _WebDomain; }
+			set { this._WebDomain = value; }
+		}
 
 		/// <summary>
 		/// Combines the pathAndQuery with the qualified domain to return a fully qualified url with optional scheme.  Defaults to // 
