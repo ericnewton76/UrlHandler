@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Configuration;
-using System.Linq;
+﻿
 using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
 using UrlHandler.Core;
+using ConfigurationManager = System.Configuration.ConfigurationManager;
 
 namespace UrlsSample
 {
@@ -24,15 +20,29 @@ namespace UrlsSample
 		/// </summary>
 		public static string ThisEnvironment { get { return ConfigurationManager.AppSettings["Urls:ThisEnvironment"]; } }
 
-		public static bool HasUrlsLink(string p)
+		/// <summary>
+		/// Looks for Urls specifications within the given string.
+		/// </summary>
+		/// <param name="value"></param>
+		/// <returns></returns>
+		public static bool HasUrlsLink(string value)
 		{
-			if(p == null) return false;
-			return S_UrlsRegex.IsMatch(p);
+			if(string.IsNullOrEmpty(value) == true)
+			{
+				return false;
+			}
+
+			return S_UrlsRegex.IsMatch(value);
 		}
 
-		public static string FixUrlsLink(string p)
+		/// <summary>
+		/// Looks for Urls specifications within the given string.  Typically used on configuration or settings or resource strings that need url handling in them too.
+		/// </summary>
+		/// <param name="value"></param>
+		/// <returns></returns>
+		public static string FixUrlsLink(string value)
 		{
-			var regexMatches = S_UrlsRegex.Matches(p);
+			var regexMatches = S_UrlsRegex.Matches(value);
 
 			foreach(System.Text.RegularExpressions.Match m in regexMatches)
 			{
@@ -42,13 +52,13 @@ namespace UrlsSample
 				{
 					UrlHandlerBase urlhandlerbase = (UrlHandlerBase)prop.GetGetMethod().Invoke(null, new object[] { });
 
-					p = p.Replace(m.Groups[0].Value, "");
+					value = value.Replace(m.Groups[0].Value, "");
 
-					return urlhandlerbase.FullyQualified(p);
+					return urlhandlerbase.FullyQualified(value);
 				}
 			}
 
-			return p;
+			return value;
 		}
 
 		private static System.Text.RegularExpressions.Regex S_UrlsRegex = new System.Text.RegularExpressions.Regex(@"\{Urls.([A-Z]+)\}", System.Text.RegularExpressions.RegexOptions.IgnoreCase);
