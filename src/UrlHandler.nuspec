@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>UrlHandler</id>
+    <version>1.0.0</version>
+    <authors>Eric Newton</authors>
+    <owners>Eric Newton</owners>
+    <projectUrl>https://github.com/ericnewton76/UrlHandler.git</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>UrlHandler helps with inter-application url handling, especially code that might exist in both environments.</description>
+    <copyright>Copyright 2016</copyright>
+    <tags></tags>
+    <!--<dependencies>
+      <dependency id="SampleDependency" version="1.0" />
+    </dependencies>-->
+  </metadata>
+</package>
