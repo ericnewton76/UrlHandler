@@ -20,6 +20,8 @@ namespace UrlsSample
 
 			Console.WriteLine("\nIndividual Properties:\n----------------------");
 			Console.WriteLine("Urls.ContentWeb.Home = {0}", Urls.ContentWeb.Home);
+			Console.WriteLine("Urls.ContentWeb.Home = {0}", Urls.ContentWeb.ContactUs);
+			Console.WriteLine("Urls.ContentWeb.Home = {0}", Urls.ContentWeb.GetUri("/Some/Random-Page"));
 
 
 			Console.WriteLine("\nFixUrlLinks:\n----------------------");
