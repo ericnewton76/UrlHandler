@@ -1,6 +1,11 @@
 # UrlHandler
 UrlHandler deals with inter-web applications that may/may not need FQDN.  Useful for dealing with both large solutions with several web application and the small project with some convenient url handling support.
 
+Easily installable via Nuget:
+```
+Install-Package UrlHandler
+```
+
 The base domain for each environment is configured in web.config or app.config, and are then able to be transformed via XDT transformations for your build environments.  
 
 ```xml
