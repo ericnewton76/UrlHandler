@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>UrlHandler</id>
-    <version>$version</version>
+    <version>0.1.0</version>
     <authors>Eric Newton</authors>
     <owners>Eric Newton</owners>
     <projectUrl>https://github.com/ericnewton76/UrlHandler</projectUrl>
