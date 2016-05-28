@@ -2,10 +2,11 @@
 <package >
   <metadata>
     <id>UrlHandler</id>
-    <version>1.0.0</version>
+    <version>$version</version>
     <authors>Eric Newton</authors>
     <owners>Eric Newton</owners>
-    <projectUrl>https://github.com/ericnewton76/UrlHandler.git</projectUrl>
+    <projectUrl>https://github.com/ericnewton76/UrlHandler</projectUrl>
+    <licenseUrl>http://www.apache.org/licenses/LICENSE-2.0.html</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>UrlHandler helps with inter-application url handling, especially code that might exist in both environments.</description>
     <copyright>Copyright 2016</copyright>
